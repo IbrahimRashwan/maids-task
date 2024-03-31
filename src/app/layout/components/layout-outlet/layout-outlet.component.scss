@@ -1,0 +1,19 @@
+$header-height: 67px;
+$footer-height: 45px;
+:host{
+  app-header{
+    min-height: $header-height;
+    display: block;
+  }
+  .layout-outlet{
+    min-height: calc(100% - $header-height - $footer-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  app-footer{
+    min-height: $footer-height;
+    display: block;
+  }
+
+}

@@ -1,0 +1,28 @@
+:host{
+  .mat-toolbar{
+    background-color: #d7e3ff;
+    color: #005cbb;
+    .link-active{
+      background-color: #005cbb1a;
+    }
+  }
+}
+::ng-deep{
+  .mat-toolbar{
+    .search-input{
+      .mat-mdc-text-field-wrapper{
+        background: white;
+        border-radius: 34px;
+        .mdc-line-ripple{
+          display: none!important;
+        }
+      }
+      .mat-mdc-form-field-focus-overlay{
+        display: none!important;
+      }
+      .mat-mdc-form-field-subscript-wrapper{
+        display: none!important;
+      }
+    }
+  }
+}
