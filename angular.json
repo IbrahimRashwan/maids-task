@@ -77,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "maids-task:build:production"
+              "buildTarget": "maids-task:build:production"
             },
             "development": {
-              "browserTarget": "maids-task:build:development"
+              "buildTarget": "maids-task:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -88,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "maids-task:build"
+            "buildTarget": "maids-task:build"
           }
         },
         "test": {
