@@ -1,15 +1,17 @@
 <mat-toolbar>
-  <div class="container d-flex align-items-center justify-content-between">
-    <div class="d-flex align-items-center justify-content-start gap-2">
-      <span>Maids</span>
-      <div>
-        <button class="rounded-pill px-4" mat-button color="primary" routerLink="./" routerLinkActive="link-active">Home</button>
-        <button class="rounded-pill px-4" mat-button color="primary" routerLink="./users" routerLinkActive="link-active">Users</button>
+  <div class="content w-100">
+    <div class="container d-flex align-items-center justify-content-between">
+      <div class="d-flex align-items-center justify-content-start gap-2">
+        <span>Maids</span>
+        <div>
+          <button class="rounded-pill px-4" mat-button color="primary" routerLink="./" routerLinkActive="link-active">Home</button>
+          <button class="rounded-pill px-4" mat-button color="primary" routerLink="./users" routerLinkActive="link-active">Users</button>
+        </div>
       </div>
+      <mat-form-field class="search-input" appearance="fill">
+        <input [formControl]="searchControl" matInput placeholder="Search by user id">
+        <mat-icon matSuffix>search</mat-icon>
+      </mat-form-field>
     </div>
-    <mat-form-field class="search-input" appearance="fill">
-      <input [formControl]="searchControl" matInput placeholder="Search by user name">
-      <mat-icon matSuffix>search</mat-icon>
-    </mat-form-field>
   </div>
 </mat-toolbar>

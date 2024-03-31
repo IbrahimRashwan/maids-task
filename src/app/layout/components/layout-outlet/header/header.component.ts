@@ -29,7 +29,7 @@ import { debounceTime } from 'rxjs/internal/operators/debounceTime';
 export class HeaderComponent implements OnInit {
   private _destroyRef: DestroyRef = inject(DestroyRef)
   private _router: Router = inject(Router)
-  public searchControl: FormControl = new FormControl('');
+  public searchControl: FormControl<string | null> = new FormControl('');
 
   ngOnInit():void {
     this.onSearchChange();
@@ -41,8 +41,8 @@ export class HeaderComponent implements OnInit {
       debounceTime(500),
       takeUntilDestroyed(this._destroyRef)
     )
-    .subscribe(keyowrd => {
-      this._router.navigate(['/users'],{queryParams:{keyowrd}})
+    .subscribe(id => {
+      this._router.navigate(['/users', id]).then(() => this.searchControl.setValue(null, { emitEvent: false }))
     })
   }
 

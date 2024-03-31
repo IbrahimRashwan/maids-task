@@ -1,1 +1,20 @@
-<p>user-details works!</p>
+@defer (when !isLoading && user) {
+  <div class="card border-0 user-card my-5">
+    <div class="card-background">
+    </div>
+    <div class="card-content">
+      <button class="back-button rounded-circle" routerLink="../" mat-icon-button>
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
+       <div class="card-image-wrapper">
+          <div class="card-avatar" [style.background-image]="'url('+user.avatar+')'"></div>
+       </div>
+       <h1 class="card-name">{{user.first_name}} {{user.last_name}}</h1>
+       <p class="card-description">{{user.email}}</p>
+    </div>
+  </div>
+} @placeholder {
+  <div class="d-flex align-items-center justify-content-center">
+    <app-spinner-loading color="#005cbb"/>
+  </div>
+}

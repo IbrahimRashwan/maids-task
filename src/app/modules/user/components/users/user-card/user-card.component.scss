@@ -1,0 +1,26 @@
+.user-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 3.4em;
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0.5rem 1rem #d7e3ff;
+  .card-img {
+     filter: drop-shadow(0 4px 10px rgba(#d7e3ff, .4));
+     -webkit-filter: drop-shadow(0 4px 10px rgba(#d7e3ff, .4));
+  }
+  .card-body {
+     margin: 2.5rem 0;
+  }
+  .card-head {
+     color: var(--clr-head);
+     font-size: 1.375rem;
+     margin-bottom: 0;
+     font-weight: bold;
+  }
+}

@@ -1,1 +1,14 @@
-<p>user-card works!</p>
+<div class="card border-0 user-card d-flex align-items-start p-2">
+  <div class="row g-0 align-items-start w-100">
+    <div class="col-md-4">
+      <img class="rounded-circle" width="100" height="100" [ngSrc]="user().avatar" [alt]="user().avatar" />
+    </div>
+    <div class="col-md-8">
+      <div class="card-body w-100 m-0">
+          <h2 class="card-head">{{user().first_name}} {{user().last_name}}</h2>
+          <p class="card-desc">{{user().email}}</p>
+          <a class="rounded-pill w-100" mat-flat-button color="primary" [routerLink]="['./',user().id]">Profile</a>
+      </div>
+    </div>
+  </div>
+</div>

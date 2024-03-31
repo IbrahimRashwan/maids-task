@@ -1,9 +1,13 @@
 :host{
   .mat-toolbar{
+    height: 100%;
     background-color: #d7e3ff;
     color: #005cbb;
-    .link-active{
-      background-color: #005cbb1a;
+    .content{
+      padding: 10px 0;
+      .link-active{
+        background-color: #005cbb1a;
+      }
     }
   }
 }

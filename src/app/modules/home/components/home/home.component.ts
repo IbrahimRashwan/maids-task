@@ -1,3 +1,4 @@
+import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink } from '@angular/router';
@@ -7,7 +8,8 @@ import { RouterLink } from '@angular/router';
   standalone: true,
   imports: [
     MatButtonModule,
-    RouterLink
+    RouterLink,
+    NgOptimizedImage
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']

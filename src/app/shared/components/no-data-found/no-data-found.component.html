@@ -1,7 +1,7 @@
 <section class="container no-data-found-card d-flex align-items-center justify-content-center">
   <div class="no-data-found-content">
-    <img class="d-block mx-auto mb-20-px" [src]="img" alt="No data found icon">
-    <span class="d-flex justify-content-center">No Data Found</span>
+    <img class="d-block mx-auto mb-20-px" [ngSrc]="img" height="500" width="500" alt="No data found icon">
+    <span class="d-flex justify-content-center">{{message}}</span>
     <ng-content></ng-content>
   </div>
 </section>

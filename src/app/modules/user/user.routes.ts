@@ -1,8 +1,10 @@
 import { Routes } from '@angular/router';
+import { UserService } from './services/user.service';
 
 export const userRoutes: Routes = [
   {
-    path:'users', 
+    path:'users',
+    providers:[UserService],
     children: [
       {
         path:'',

@@ -1,1 +1,30 @@
-<p>users works! and keyword is {{keyowrd}}</p>
+<div class="container">
+  <h1 class="page-title my-3">List Of Users</h1>
+  @defer (when !isLoading) {
+    <div class="row">
+      @for (user of users.data; track user.id; let i = $index) {
+        <div class="col-md-4 mb-5">
+          <app-user-card [user]="user"/>
+        </div>
+      } @empty {
+        <div class="col-md-12">
+          <app-no-data-found/>
+        </div>
+      }
+      <div class="col-md-12 d-flex align-items-center justify-content-center">
+        <mat-paginator #paginator
+               (page)="handlePageEvent($event)"
+               [length]="users.total_pages * users.per_page"
+               [pageSize]="users.per_page"
+               [hidePageSize]="true"
+               [pageIndex]="(page || 1) - 1"
+               aria-label="Select page">
+        </mat-paginator>
+      </div>
+    </div>
+  } @placeholder {
+    <div class="d-flex align-items-center justify-content-center">
+      <app-spinner-loading color="#005cbb"/>
+    </div>
+  }
+</div>

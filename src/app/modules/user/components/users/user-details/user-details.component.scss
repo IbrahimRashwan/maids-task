@@ -1,0 +1,95 @@
+.user-card {
+   width: 360px;
+   background: #fff;
+   border-radius: 2px;
+   box-shadow: 0 14px 28px #d7e3ff, 0 10px 10px #d7e3ff;
+   overflow: hidden;
+   position: relative;
+   transition: .2s;
+
+   .card-background {
+      background: url('/assets/images/user-card-background.webp') center center no-repeat;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+      transform: scale(1.1);
+      transition: .3s;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         background: rgba(0,0,0,0.2);
+
+      }
+   }
+   .card-image-wrapper {
+      z-index: 10;
+      width: 130px;
+      height: 130px;
+      border-radius: 130px;
+      display: inline-block;
+      position: relative;
+
+      &::before {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+         background: transparent;
+         border-radius: 130px;
+         display: block;
+         z-index: 10;
+      }
+   }
+   .card-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 130px;
+      box-shadow: 0 0 0 5px rgba(0,0,0,0.1);
+      background-position: center center;
+      background-repeat: no-repeat;
+       background-size: cover;
+   }
+   .card-content {
+      text-align: center;
+      position: relative;
+      z-index: 10;
+      padding: 120px 40px;
+      .back-button{
+        position: absolute;
+        z-index: 1;
+        top: 10px;
+        left: 10px;
+        background-color: white;
+        color: #005cbb;
+      }
+   }
+
+   .card-name {
+      text-transform: uppercase;
+      font-size: 24px;
+      margin-bottom: 5px;
+      color: #fff;
+      text-shadow: 0 0 10px rgba(0,0,0,0.2);
+      outline: none;
+   }
+
+   .card-description {
+      color: rgba(255,255,255,0.9);
+      line-height: 1.5em;
+      margin: 0;
+      text-shadow: 0 0 10px rgba(0,0,0,0.6);
+      outline: none;
+   }
+}
+
